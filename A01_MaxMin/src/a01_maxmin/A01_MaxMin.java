@@ -1,20 +1,32 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package a01_maxmin;
+import java.util.Scanner;
 
-/**
- *
- * @author javie
- */
+
 public class A01_MaxMin {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner sc = new Scanner(System.in);
+        final int CANTIDAD = 5;
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        int suma = 0;
+        int numero;
+        
+        for (int i = 0; i < CANTIDAD; i++) {
+            System.out.println("Ingrese un numero: ");
+            numero = sc.nextInt();
+            
+            if (numero > max) max=numero;
+            if (numero < min) min=numero;
+            suma+=numero;
+        };
+        
+        System.out.println("Maximo: " + max);
+        System.out.println("Minimo: " + min);
+        System.out.println("Promedio: " + suma / CANTIDAD);
+        
+        
+        
     }
     
 }
